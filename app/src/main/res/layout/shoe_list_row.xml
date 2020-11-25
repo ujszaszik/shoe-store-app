@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.model.Shoe" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/defaultCardCornerRadius"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/shoeListCapitalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/smallMargin"
+                android:layout_marginTop="@dimen/mediumMargin"
+                android:background="@drawable/circle"
+                android:gravity="center"
+                android:text="@{shoe.capital}"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/heavyTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shoeListNameText"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/smallMargin"
+                android:layout_marginTop="@dimen/mediumMargin"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:fontFamily="@font/autour_one"
+                android:text="@{shoe.name}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/shoeTitleTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/shoeListCompanyText"
+                app:layout_constraintEnd_toStartOf="@+id/shoeListSizeText"
+                app:layout_constraintHorizontal_bias="@dimen/half"
+                app:layout_constraintStart_toEndOf="@+id/shoeListCapitalText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/shoeListSizeText"
+                android:layout_width="@dimen/shoeSizeTextViewWidth"
+                android:layout_height="@dimen/shoeSizeTextViewHeight"
+                android:layout_marginTop="@dimen/mediumMargin"
+                android:layout_marginEnd="@dimen/mediumMargin"
+                android:fontFamily="@font/audiowide"
+                android:gravity="center"
+                android:text="@{shoe.size}"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/bigTextSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/shoeListCompanyText"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/smallMargin"
+                android:layout_marginTop="@dimen/tinyMargin"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:fontFamily="@font/autour_one"
+                android:text="@{shoe.company}"
+                android:textColor="@color/design_default_color_secondary"
+                android:textSize="@dimen/defaultTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/shoeListDescriptionText"
+                app:layout_constraintEnd_toStartOf="@+id/shoeListSizeText"
+                app:layout_constraintHorizontal_bias="@dimen/half"
+                app:layout_constraintStart_toEndOf="@+id/shoeListCapitalText"
+                app:layout_constraintTop_toBottomOf="@+id/shoeListNameText" />
+
+            <TextView
+                android:id="@+id/shoeListDescriptionText"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/smallMargin"
+                android:layout_marginTop="@dimen/microMargin"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:layout_marginBottom="@dimen/smallMargin"
+                android:text="@{shoe.description}"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="@dimen/shoeDescriptionTextSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/shoeListSizeText"
+                app:layout_constraintHorizontal_bias="@dimen/half"
+                app:layout_constraintStart_toEndOf="@+id/shoeListCapitalText"
+                app:layout_constraintTop_toBottomOf="@+id/shoeListCompanyText" />
+
+            <TextView
+                android:id="@+id/shoeListSizeTitleText"
+                android:layout_width="@dimen/heavyMargin"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/mediumMargin"
+                android:fontFamily="@font/audiowide"
+                android:text="@string/shoe_list_size_label"
+                android:textAlignment="center"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/shoeTitleTextSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shoeListSizeText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
