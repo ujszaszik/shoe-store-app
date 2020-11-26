@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--    Using Constraint Layout for well positioning with the usage of guidelines-->
+
     <ImageView
         android:id="@+id/sadCowboyImageView"
         android:layout_width="250dp"

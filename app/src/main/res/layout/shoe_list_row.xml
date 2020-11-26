@@ -9,6 +9,8 @@
             type="com.udacity.shoestore.model.Shoe" />
     </data>
 
+    <!--    Using CardView for card-like design, and Constraint Layout for more complex UI avoiding nested layouts-->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

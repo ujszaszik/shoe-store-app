@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:bind="http://schemas.android.com/tools">
 
+    <!--    Using Coordinator Layout for avoiding possible overlaps at the bottom with the FAB -->
+
     <data>
 
         <variable
