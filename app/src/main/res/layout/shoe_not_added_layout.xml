@@ -7,19 +7,19 @@
     <!--    Using Constraint Layout for well positioning with the usage of guidelines-->
 
     <ImageView
-        android:id="@+id/sadCowboyImageView"
+        android:id="@+id/sadEmoticonImageView"
         android:layout_width="@dimen/emoticonImageSize"
         android:layout_height="@dimen/emoticonImageSize"
         android:layout_marginTop="@dimen/hugeMargin"
         android:layout_marginBottom="@dimen/defaultMargin"
         android:src="@drawable/sad_emoji"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintBottom_toTopOf="@+id/noShoesGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/sadCowboyTextView"
+        android:id="@+id/noShoesTextView"
         android:layout_width="@dimen/match_constraint"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/mediumMargin"
@@ -29,10 +29,10 @@
         android:textSize="@dimen/noShoesTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toTopOf="@+id/noShoesGuideline" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/noShoesGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
