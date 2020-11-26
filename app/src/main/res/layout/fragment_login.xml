@@ -24,8 +24,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/loginNameLayout"
             style="@style/LoginTextInputLayoutStyle"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/defaultTextViewHeight"
             android:layout_marginStart="@dimen/mediumMargin"
             android:layout_marginEnd="@dimen/mediumMargin"
             android:layout_marginBottom="@dimen/defaultMargin"
@@ -43,7 +43,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordLayout"
             style="@style/LoginTextInputLayoutStyle"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="@dimen/defaultTextViewHeight"
             android:layout_marginStart="@dimen/mediumMargin"
             android:layout_marginTop="@dimen/defaultMargin"
@@ -63,7 +63,7 @@
 
         <Button
             android:id="@+id/loginButton"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/mediumMargin"
             android:layout_marginEnd="@dimen/mediumMargin"
@@ -77,7 +77,7 @@
 
         <Button
             android:id="@+id/registerButton"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/mediumMargin"
             android:layout_marginEnd="@dimen/mediumMargin"

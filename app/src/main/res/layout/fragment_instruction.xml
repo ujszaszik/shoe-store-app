@@ -23,38 +23,38 @@
             android:textSize="@dimen/largeTextSize"
             app:layout_constraintBottom_toTopOf="@+id/instructionText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="@dimen/half"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
             android:id="@+id/instructionText"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="@dimen/mediumMargin"
+            android:layout_marginEnd="@dimen/mediumMargin"
             android:fontFamily="sans-serif"
             android:text="@string/instruction_text"
             android:textAlignment="viewStart"
-            android:textSize="20sp"
+            android:textSize="@dimen/mediumTextSize"
             android:textStyle="italic"
             app:layout_constraintBottom_toTopOf="@+id/shoeListButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="@dimen/half"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/instructionHeader" />
 
         <Button
             android:id="@+id/shoeListButton"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/defaultMargin"
             android:layout_marginEnd="@dimen/defaultMargin"
             android:text="@string/go_to_shoe_list"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="@dimen/half"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/instructionText" />
 

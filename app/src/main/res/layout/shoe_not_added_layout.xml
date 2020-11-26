@@ -8,10 +8,10 @@
 
     <ImageView
         android:id="@+id/sadCowboyImageView"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="@dimen/emoticonImageSize"
+        android:layout_height="@dimen/emoticonImageSize"
+        android:layout_marginTop="@dimen/hugeMargin"
+        android:layout_marginBottom="@dimen/defaultMargin"
         android:src="@drawable/sad_emoji"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,13 +20,13 @@
 
     <TextView
         android:id="@+id/sadCowboyTextView"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/match_constraint"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/mediumMargin"
         android:fontFamily="sans-serif"
         android:text="@string/no_shoes_added"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="@dimen/noShoesTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
@@ -36,6 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="@dimen/sixtyPercent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
