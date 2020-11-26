@@ -54,9 +54,9 @@ class ShoeListBindingAdapter(
 
     private fun getLinearLayout(): LinearLayout {
         return LinearLayout(context)
-            .also {
-                it.orientation = LinearLayout.VERTICAL
-                it.setBackgroundColor(ContextCompat.getColor(context, R.color.grey))
+            .apply {
+                orientation = LinearLayout.VERTICAL
+                setBackgroundColor(ContextCompat.getColor(context, R.color.grey))
             }
     }
 
