@@ -8,10 +8,16 @@ import android.view.inputmethod.InputMethodManager
 object HideKeyboardListener : View.OnTouchListener {
 
     override fun onTouch(view: View?, motionEvent: MotionEvent?): Boolean {
-        val inputMethodManager =
-            view?.context?.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(view.findFocus().windowToken, 0);
-        return true;
+        getInputMethodManager(view)?.let { inputMethodManager ->
+            view?.findFocus()?.let { focus ->
+                inputMethodManager.hideSoftInputFromWindow(focus.windowToken, 0);
+                return true;
+            }
+        } ?: return false
+    }
+
+    private fun getInputMethodManager(view: View?): InputMethodManager? {
+        return view?.context?.getSystemService(INPUT_METHOD_SERVICE) as? InputMethodManager
     }
 
 }

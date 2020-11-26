@@ -1,5 +1,6 @@
 package com.udacity.shoestore.login
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
+import com.udacity.shoestore.keyboard.HideKeyboardListener
 
 
 class LoginFragment : Fragment() {
@@ -23,11 +25,17 @@ class LoginFragment : Fragment() {
     ): View? {
         binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        setListeners()
+        setHideKeyboardListener()
+        setClickListeners()
         return binding.root
     }
 
-    private fun setListeners() {
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setHideKeyboardListener() {
+        binding.loginFragmentLayout.setOnTouchListener(HideKeyboardListener)
+    }
+
+    private fun setClickListeners() {
         val onClickListener: (View) -> Unit = { navigateToWelcomeScreen(getEnteredUsername()) }
         binding.loginButton.setOnClickListener(onClickListener)
         binding.registerButton.setOnClickListener(onClickListener)
