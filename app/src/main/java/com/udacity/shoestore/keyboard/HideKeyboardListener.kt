@@ -9,7 +9,7 @@ object HideKeyboardListener : View.OnTouchListener {
 
     override fun onTouch(view: View?, motionEvent: MotionEvent?): Boolean {
         val inputMethodManager =
-            view!!.context.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            view?.context?.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view.findFocus().windowToken, 0);
         return true;
     }
