@@ -34,5 +34,6 @@
     <dimen name="defaultCardElevation">1dp</dimen>
 
     <item name="half" format="float" type="dimen">0.5</item>
+    <item name="threeQuarters" format="float" type="dimen">0.75</item>
     <item name="whole" format="float" type="dimen">1.0</item>
 </resources>

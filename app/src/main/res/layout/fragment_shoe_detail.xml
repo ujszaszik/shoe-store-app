@@ -129,7 +129,6 @@
             android:text="@string/cancel_shoe_creation"
             app:layout_constraintBaseline_toBaselineOf="@+id/saveButton"
             app:layout_constraintEnd_toStartOf="@+id/saveButton"
-            app:layout_constraintHorizontal_bias="@dimen/half"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
@@ -143,7 +142,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="@dimen/whole"
-            app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+            app:layout_constraintStart_toEndOf="@+id/cancelButton"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionLayout"
+            app:layout_constraintVertical_bias="@dimen/threeQuarters" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
